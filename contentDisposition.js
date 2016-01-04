@@ -1,6 +1,7 @@
 var express = require("express");
 
 var app = express();
+app.set('port', (process.env.PORT || 5000));
 
 app.use(function (req, res, next) {	 
 	res.setHeader('Content-Disposition', 'attachement');
@@ -9,7 +10,7 @@ app.use(function (req, res, next) {
 
 app.use('/', express.static('files'));
 
-var server = app.listen(9002, 'localhost', function () {
+var server = app.listen(app.get('port'), 'localhost', function () {
   var host = server.address().address;
-  var port = server.address().port;
+  var port = port;
 });
