@@ -4,7 +4,7 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 app.use(function (req, res, next) {	 
-	res.setHeader('Content-Disposition', 'attachement');
+	res.setHeader('Content-Disposition', 'attachment');
 	next();
 });
 
