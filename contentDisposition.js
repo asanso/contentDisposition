@@ -10,7 +10,7 @@ app.use(function (req, res, next) {
 
 app.use('/', express.static('files'));
 
-var server = app.listen(app.get('port'), 'localhost', function () {
+var server = app.listen(app.get('port'), function() {
   var host = server.address().address;
   var port = port;
 });
